@@ -1,0 +1,297 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1357,4539" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="710,4474" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 네이버 뉴스" sap:VirtualizedContainerService.HintSize="668,478" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="400,256" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click '검색'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://news.naver.com/" DesignTimeRectangle="2437, 294, 58, 56" ElementType="Button" FriendlyName="'검색'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='검색' check:text='검색' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAA8CAYAAAA+CQlPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAW6SURBVGhD7ZtbT1xVFMf5CDzyEXww+mh8sj4YY6zRVhRLYqa1L1IfMNWYtqJYerHl0qqUBmpSK9aC4qWQtLWgaKy2BTFMG6VF5g7MGYbpXBiYYSCwXP81Hgi4wwzDmWQ4nJP8k8M+a23yO2vvtdY+yRTNzc3R/Pw8LSwskNkvMIIVzEW4wTU4OEjl5eVUUlJCxcXFphKYwAZGXGAuwlvAgBmBVwuMYAVzEd4A3gYeVFRUkKZpshTMJDCBDYxgxSXgerTNCK0LbHrUl8AxAKkczCSd0wK3wBXGZpIFboFb4GoHs8gCzxd4dDpFDi1BPfYo1XcGaO9ZL22rdtCjbw/TI2/dp23vj9DeJq8867HHxBY+qrmMVN7Ao9Oz5AokqO+fKersD1NLd5A++MpPb3w6SuUfeWhHrYteYO067eYxnzxruT7JthHqZx83+8by+ALyAp5KzZFTm6G2GyF699K4gJbWu+n1Fp/83dA1QU0/BEUNXQEZw7PSOhfbuqmK/26/8YDnSMhcqv+xURkOjkgD+spAhA5eHKdXTrlpJwPtPuOlIx0aff5ziHruROk2RxXCPcaOdPjZxkM7/1sFh74cpyt/RgQ+H0vfcHBXYIYucaQPXhyjlzjKtkavLOHeuzEadMXJ4Z+h8VCSJiJp4R5jePbT3Sg1Xw/SbvaBL14c5sKcqv+1ERkKjshgT2PplnGkAX38G433bFyeJWfVfhCeReMp2d/H2MfW6JE5MBfmjM+kaHYN//XKUHBkZCQy7FMs2RaOHqC1cFLA1tqveAYb7UFS4OGLOZAfujjhYWUAXuWbiwwF7+aShaVaWu+iPbxfsbwzRXq1JPLs08vLHnkBSfFc9yQNjMRpMjqr9MlFhoLXXg5QNZelinM+OsrJys77NlOkV0uPPPY8El4FZ/vDPCeyPEqcyicXGQq+hxuRfVyTUY5afwlJdlfZZSMkPGR77PF9/CJPfKfRX95ppW0uMhT8Ce7CUIpQm3/kMoV9qbLLRvBFqavjju7lBm5yGB57X2WbiwwFf3j/PXr+pJPOXgtKJg5yuVLZZSOUOtT5Rp5r+3Envfqxh27eiyltc5Gh4A9VDtH2D53UdG3CMPAzmwH88UPDVNrgkgPHllrqaDr0fryVE5OTE5TKLhshuV3gOdC6Fnxyk3LW7hd4lCKUpI2Us5qvNZkLJ7eCLmd6A/OiHErQwEQ30MDE0g1M3SZoYPSWdRe3rDtqnfISsC/RhmaKPJ4l2MbPtrfuc1K7GqTnOFGW8f7u7CvwlhWRWj6kuMj2iYcPKX6BzxR5QEf4kHKToeGPDxXPHHXSm+dHOZsX+CEFWnEs5SUPeBw4sOxXHktnRbiXY6kzfSxtvDoh0I8dGKanDjvondYxWeaZVsx6ZTj42h8i/OkPEZwLbg/HRd32GF3oDXEi8/M53CPL+9ljDnq6xkFPVo9IRv/175h8hlpPrsgkw8EhRGatT0+o803cmED1nRM8lq4E+PRUxn3A/s9G6cAXY9L3o5y1cUYfcMQpkMXxNlvlBRxa+bExQs2cmdMfG31L5/X0eXv5Y2Nzd5Au94WlQ8PyRqQBjUPPie81gY/xXjci8nkD14WkNDaZpH4GwQo4yQCV5330WpNHVMnJC2Ptv4XoD7aBLXwAh+UNWEBXtY2zjXGRzzs4MjFAglyDkfjQfQ2MTHHJiolwjzE3P4ONnr0BBThAAhbQVW1+fkkBQyKfd/CNSiLPkIAF9HsM3/77cuRRBlV+mVTw4P+LPEMDXo98mGu/yi+TCh5c1+rI13Ro0iIPjeZ2ENo04KsjD2hUi29vhZX2mbRpwHUlknMUnkrRkG9GoHEeUNll0qYDN0oWuAVugasdzCIL3AK3wNUOZpEFvuXBt+RPMxYXF5d+jGOz2chut5PX6zWVwAQ2MIIVzEWJRGLL/fwKzLLUcWEAb8OMLwBMYAOjfi2Bb62L6F/I5jT2V26dugAAAABJRU5ErkJggg==" InformativeScreenshot="216d49e1984c0af0a737c1215f30689a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='네이버 뉴스' /&gt;" SearchSteps="FuzzySelector, Image" Text="검색" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='submit' /&gt;">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="BottomRight" X="-12" Y="-12" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAVXSURBVHhe7ZoJT+pKHEf9SPcDvnfjvqKgIju4+4G8Mca8a9ziiopLnuzOnd+0A9PptFDoH3gvNDmBFo09Z9pKl4nxNJ7G03jqdjo6OmKHh4eCgwNwINjf3xfs7YE9tgt2dwU7O2CHbYPtbUEBFAosD/Igz3Igl2NZkM2xTDZrkcmydCaDny/F4/Ef9qoMZ4J4s9nsmoZOQ0HMN5Rl7fd18d6i+f3NEP7i4gLBhhtBBqjX6y1qKjUn1VpNgy+r8ldJrcoq/BVUq/x9pT1fwTwHERDg/f2dXV5eYksZXgRs9sMK8Pn5KSJgS+C7yXAiYH9vNr+5eMMcQQtQCyEAdgc1QKlUYufn5/z4MIQIwwzw8fHRCvDy8sL++f2bHxyzpeggI+BIP8xjwNvbG3t9fRUBisUiOzs7Y+l0phSNDijCMANg5KX88/Mze3p6Yg8PD+z09JQlUykeIUofAf/nZQCHuEHeHQDzSgC+zJK05lX5snhvIXcBiKvyj4+P7P7+nt3d3bGTkxOWSA4gAr7kIEA38p33fznS1rxXALkFYJMHUh6jD/nb21t2c3PDjn/9YluJJG0EfMNzBXCJWzjlQX8BIC3F5chL+evra3Z1dcWOj495hETJXt3wJ3y1FQE0WZ2O8sBn/zcFiEQiXRFb32D26oY/dRPALQ96G33xnvP0VGT3D3yfd4GtweKOUyw+s+j6Ol0AnNj4BXCLg95HXwbAq5kKK5cr7MsG30+iMdIAO4YANYGnvB6AL2/L81cu4hVAfuYWB1zeGCBGFwCntFYAS8Qfs3zQ0fcNwKX1AGtRygD8PB6nsW5ZHYM8cMj3M/rAKT8iATzEgSJvBbAl7XlIBRp9jwCr0ShdAFzJcQewpb3EQQd5C8zb4DOHsI57828FWKMMUCjYAbqQBiKQU9QkD6l+R78dYI0uAK7h4ZKVUVbHTx7YyyAVxujLAJFVygD5DgFauwVk2uIgiLx3AO/RH1CAvDNASxhUPcSBLaYsh5AqL+ZtnNIq3qMvA6ysrtIFwKVr50EQK+8UljjEgfIZZHqS9xl9IAJEKAPkcmILUGV0XOJA+RwyweWB/+gD8gC4aaEHaO0OXMZPHECkZ/kOow8QYHklQhggiwANs6xEkzaJU8gD8gC4VYUAfrIqUkKXb/2+/bk3bfnuAtTZ0soKdQD/Y4AqoIuLZQrqz7oJJv9VLlsBlikDZNwB9BXXpU3i4ctzvsriEt0iZQDcpRW7gEHSBGSCiYPe5P+VAZaWCQOkOweQIsHFQQ/yfNMfWIBUOu04CMoVV0V1nIJ+9CLPseVlgIWlpcEF8MIs6Ef/8q0Ai5QBUu4AZqFuscVDkJcB5ikDJFMpcavKLBOEPsSBQb4VYGGRMECy3wBu8bDkAXmARDLZY4AQxIFBWgUB5hYWRiWAIt2vODAI64gA84QBthKmAIqkDl/xvsWBQdYEAszSBkjYAWxBHb6yoUkL2l9yukEEmJunCxDf4gH4KadJVMUsExAuFEQeIMAMbYAtEcC4wqERXFzy3w/AJXqVBwgwPTtHF2AzThSAr3w/4pIBBIiHG4CvdBjiEhFgZpYuwMZmGAEs6TDFJQgwNZoB6KRVBhBgs8sAbWFqaRUEmJyeoQuwvoEAdYecjmnFBsUAAmyIP2L646OACDA1TRcAz+CNeoCf4wCEAfAQ4qgH+HtyijBAzAowyhAHiInH0ACexsIDSXgmB09lADycgNvTADcpAe7V4XYV7tjgmj3ApWtcvcUFTFzCAriSg4sZOJ/HKS1OagC+2gr4/3f8jwc40gv45o5NHkAc/PVzki7AeBpP4+l/Nk1M/AFgFh9DremQuwAAAABJRU5ErkJggg==" InformativeScreenshot="44253f951c1a89cc177402e322fb7f2c.png" Selector="&lt;html app='chrome.exe' title='네이버 뉴스'/&gt;" Url="https://news.naver.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ueab:ExcelApplicationCard Password="{x:Null}" DisplayName="Excel 파일 사용" sap:VirtualizedContainerService.HintSize="668,3150" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="keywords.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Keyword" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="656,2886" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" DisplayName="Excel 파일 사용" sap:VirtualizedContainerService.HintSize="614,2796" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" WorkbookPath="TodayNews.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="News" />
+                  </ActivityAction.Argument>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="602,2532" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="560,2313" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[Keyword.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
+                      <ueab:ExcelForEachRow.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="548,2124" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: : 네이버 뉴스검색" sap:VirtualizedContainerService.HintSize="506,2034" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" Version="V1">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="494,1812" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ClickType="Single" DisplayName="Click '기간'" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://search.naver.com/search.naver?query=&amp;where=news&amp;ie=utf8&amp;sm=nws_hty" DesignTimeRectangle="419, 396, 135, 92" ElementType="Text" FriendlyName="'기간'" FullSelectorArgument="&lt;webctrl aaname='기간' aria-role='tab' parentid='snb' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='기간' aria-role='tab' parentid='snb' tag='A' type='' check:text='기간' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAABgCAYAAAAtmoG+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAKXSURBVHhe7dxdattAFEBhrdbrMN5CoBtou4MW+l7aRZTsoCWG4n87TJlQweBM5TNjV5aU8/C9WHNHgXvIz0uan0/LIBHGIqxZrddBIpr1ZhMkotlst0Eimu1uFySi2R8OQSKaw/EYJMJYhDXH0ylIhLEIa07Pz0EijEWYsQgzFmHGIsxYhBmLMGMRZizCjEWYsQgzFmHGIsxYhBmLMGMRZizCjEWYsQgzFmHGIsxYhBmLMGMRZizCjEWYsQibXCyz2exF7tmt9PGOIXqzsbTnLumazT2bskHFki6J6Loj9yyV3tOlazb3bMrebCyX9PGOsRnlj6E+Ftl1x63eMTbGknHpjlu8Y4xGF0sfi+zjHWNkLGfI/LXvGKtRxpL7vHXNIulse+5c7uyUjCoWspTaxbVzZDY9m8qdnZLRxEIXUrO4dobO1bwj9enzlzCfz4vEmdxdfRpFLCXLLF1kyd2t0vPn4r8Jff/hYzaKnHg2zuTu6tPgYyldJj1bem+qdi613+9RMPFMPJu7o2+DjqVmoZfOp3d2netyzWxqvduHh4d32Uii+Cyeyc3ew2BjqV0omSm981zN1/Uvv56WYbFYvAolfhaf5WbuZXCxtIuoXUjtXIlbv+PH4+OrWOJnubP3NJhY2gVcu4jS+Zr31cxckgYzxFCiQX1nucUCShdZs/iamS7tXzpfv31/cf58KAb9C26N0kXeevFTZizGghmLsWDGYiyYsfw9Xyt351QZS7L4Grk7p2pysej/MRZhxiLMWIQZizBjEWYswoxFmLEIMxZhxiLMWIQZizBjEWYswoxFmLEIMxZhxiLMWIQZizBjEWYswoxFmLEIMxZhxiLMWIQZizBjEWYswoxFWLP8vQoSYSyCVuEPEGHCnjW2OPgAAAAASUVORK5CYII=" InformativeScreenshot="6f90e418faff6b4bd0cbcb6f9bb38a07.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=': 네이버 뉴스검색' /&gt;" SearchSteps="FuzzySelector, Image" Text="기간" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="Click '1일'" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://search.naver.com/search.naver?query=&amp;where=news&amp;ie=utf8&amp;sm=nws_hty" DesignTimeRectangle="451, 568, 262, 62" ElementType="Text" FriendlyName="'1일'" FullSelectorArgument="&lt;webctrl aaname='1일' aria-role='option' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='1일' aria-role='option' tag='A' type='' check:text='1일' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQoAAABCCAYAAACvt5h8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAG9SURBVHhe7dgxjtswEIbRHMVH8f0vQyDYJkmxgWIQdmyRP62k0JLvAVNppuRX6Nv1ev3c5sfPX8YY89eU7x9/RiiMMc15CQXAM6EAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAoqlDcblcdqdnZAdWU2YNxWMY9qYlfYcVlRlD0QtC79um9w1WVb5KKEYfb33ovf3eTrqFFZWzh6L3qPeM7rb2Ru9hJeWsoagP9nFGjO629kbvYSXljKGoj7U+2Hce7+hua2/0HlZSzhqKR+883tHd1t7oPaxki8Q2p/6Z+c7jrbu9/d5OuoUVldlCsan7eze9b5veN1hVmTEUm3rTmpb0HVZUZg3Fpt49T8/IDqymzByKI4QCXgkFEE0dinp3ZIC7IhT7A9yVmUNxhFDAK6F4IhTwaupQ1LsjA9wVodgf4K6sEArg3wgFEH2JUBxVQ3F0gJsiFO0BbsrMoQD+D6EAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAIqEAolsoPj5/A9L9ghkvNjLMAAAAAElFTkSuQmCC" InformativeScreenshot="b532c1958ac0c9ea1c6ce80d857a86c8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=': 네이버 뉴스검색' /&gt;" SearchSteps="FuzzySelector, Image" Text="1일" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'NAVER'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[CurrentRow.ByField(&quot;키워드&quot;)]">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://search.naver.com/search.naver?where=news&amp;query=&amp;sm=tab_opt&amp;sort=0&amp;photo=0&amp;field=0&amp;reporter_article=&amp;pd=4&amp;ds=&amp;de=&amp;docid=&amp;nso=so%3Ar%2Cp%3A1d%2Ca%3Aall&amp;mynews=0&amp;refresh_start=0&amp;related=0" DesignTimeRectangle="428, 192, 1022, 68" ElementType="InputBox" FriendlyName="'INPUT  nx_query'" FullSelectorArgument="&lt;webctrl id='nx_query' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nx_query' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="f35c66885da4336dcd43e0bec9120822.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=': 네이버 뉴스검색' /&gt;" SearchSteps="FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target DesignTimeRectangle="278, 168, 116, 116" ElementType="Text" FriendlyName="'NAVER'" FullSelectorArgument="&lt;webctrl parentid='header_wrap' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header_wrap' tag='A' type='' aaname='NAVER' check:text='NAVER' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAL+SURBVHhe7do/ahVRFMdxwQW4ARfgGlyEC0hpGWxcgK0bcAE2WYKFTWqLKFhY+qczIhIwFikib+KRGxjiyXjnzn2Hw+9+P3AQfHkjnG+8CTPvzgRpBBZHYHEEFkdgcQQWR2BxBBZHYHEEFkdgcQQWR2BxBBZHYHEEFkdgcQQWR2BxBBZHYHEEFkdgcQQWR2BxBBZHYHEEFkdgcQQWR2BxBBZHYHEEFkdgcQQWR2BxBBaXNvDdNwer58H7p9Pvy8tyhfU+X5y6162ZrKQC2zz58rJcYT0CB/KWWDuvz96Wq6yjFPjbj7O/Ixn4/rvD6eev83KlegQO5C1xzbQc1QQO5C1x7aw9qgkcyFvi2rGj2qLVInAgb4kt8+jTi3LF/yNwIG+JrXP0/bhcdRmBA3lLbJ17J4+rjmoCB/KWuGUefng27Xa7cnUfgQN5S9w6z7++Klf3ETiQt8Qec3L+sfwL/yJwIG+JPWbpgQSBA3lL7DW33eUicCBviT3Hu8tF4EDeEnuO90CCwIG8Jfaem0c1gQN5S9zHzO9yETiQt8R9zPwuF4EDeUusGfvZ6v390lw/kCBwIG+JNWO/Hdv/Su+1pbGjmsCBvCXWjEWyWN5rS2PfFPbN4b1WM9lIBzZ27HqvL03L8X492cgHtj9bjurWyUY+sGk5qlsnmyECG7uZ4X1d78lmmMB2O3LLz9bayWaYwGbLb8e1k81Qgc2+j+pshgtsD/ntYb/3nh6TzXCBjX1cx3tPj8lmyMDGPnjnvW/rZDNsYPvorH2E1nvvlslm2MDGvqb3Xa5shg5set/lymb4wKblgcRtkw2B/7Cv7XWXKxsCF72O6mwIPNPjLlc2BJ7p8UAiGwLfsPWBRDYEdmw5qrMi8MyWBxJZpQ2MPggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsbZquAD926ApkQveEAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" Text="NAVER" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ClickType="Single" DisplayName="Click '검색'" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://search.naver.com/search.naver?where=news&amp;query=&amp;sm=tab_opt&amp;sort=0&amp;photo=0&amp;field=0&amp;reporter_article=&amp;pd=4&amp;ds=&amp;de=&amp;docid=&amp;nso=so%3Ar%2Cp%3A1d%2Ca%3Aall&amp;mynews=0&amp;refresh_start=0&amp;related=0" DesignTimeRectangle="1604, 202, 50, 50" FriendlyName="'검색'" FullSelectorArgument="&lt;webctrl parentid='nx_search_form' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nx_search_form' tag='I' type='' aaname='검색' check:text='검색' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAOpSURBVGhD7Zm7btRAFIbzCFSINNS8ARIvQMdb0CEhemiRoKWgpEE8ARI0NKGgIAIkECKQcJEQKBRIhAKWhJ3ks/asZo+PPRePbYzyS7+8Wc+O/fmcOTPjrLn/VMdgU1PvYLPZrPLQKgY2n8/d071td3l3w13YueXOfr7t1j/dcCe3bi7Nd5yjDW35TV/qDCYwGiLk9bf3KgtkaWWDvf/1tXr6ax+vVuZm9VEbEDlqA0ifpZQMdrC/7y59uONOPLu4AmJB5QJyja5KAuOJMk4ECmtA/0h60h7zt28LSnz+zbvO0YsGYxxwowLCUX8G4PqX+1Vb66nzHedoQ1sLyneXsRcFxgXk5sU+EGMt5yb4Db+1oMS5cEEwUkIipYHOvLjiHn7fXLTMF31ooFOvnyw///6TPuZawZhYz726tgTxzZP+8XNv0bK7uHmdngLHmEud5FvBpPpp830fqwn6rOZEBYf5PkWNYKSggPjpRwT7XDHQNxHSYDilUjaCWdFiTJVMvyaRlhoKp0TNBPOroB+tEoUiVlJQNNz27t9Fi3aZYEQLIF3ShxYpqcFio2aCUd41WO580kVcU0cN2BjVwOhMoMSU4bFkRS0mHWtgLHcEiDUd0eK7sUTqabCYdKyByVYEKAEcIw1FXFuDxaRjDcxfiQPFeOtz3gqJaxcBA0TAMH+PLQ2GQ1oB4+n4UERszMIhsgpIKItWwNgv+WD4XwUL7bJrqTgVsJAmOcY6V0XxEAvfJpFyPtTpxzt5YEx+GmzIxa8W1/bBcNYEfffboxpY7MKzD/krD6KFN16GXxXUwNjMCRALUPkcqkJ9iB21HymBi9lw1sAQ4wwoMWBEcmg9MKIVM76QCUaHPljlo+o4ZNSsohGbhsgEo9Ma2JGHHGt6bMkx9uGaYIitigU3xEpfV0KJVsqDbQRj4FpgOOVtUaroWwNhxlbKUGgEQ/JCxXJfkdPLJwF7vpU2vlvBEOG3wHDpiZvXbiWihYJgbA/a4DhXMjWB8KFy4YJgiA7pWGB4ov5RAEukJ1Frg4tdt0aBIf1eXcNxxLTRYl7kpjDVNrRJLAEXDSaSaUBALPuRo70+b8FrheA436ZkMMR7PTrXNywmQiLrPI4ZL13gssAQ6URVtAClmNBGnxPHFpxcuGwwXwKIdQGxwHFonPnKgSsC1ibS1gfiZlInWxSC0+odDHFTrMpxlzmvDU6P2UHASsqCGy1ipaXhrNSeJJio7R/8kwZr0zHYtOTcIeYqKkKEYAN7AAAAAElFTkSuQmCC" InformativeScreenshot="57738f847d12d596f634ff30d15b2567.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title=': 네이버 뉴스검색' /&gt;" SearchSteps="FuzzySelector, Image" Text="검색" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='I' type='' /&gt;" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <Sequence DisplayName="테이블 추출" sap:VirtualizedContainerService.HintSize="452,714" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Default="[CurrentRow.ByField(&quot;키워드&quot;)]" Name="SheetName" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Saved.Values(Of DataTable)(&quot;MyDT2&quot;)]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;/row&gt;&lt;column exact='1' name='뉴스제목' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='요약' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='뉴스제공자' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='날짜' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="30">
+                                        <uix:NExtractData.NextLink>
+                                          <uix:TargetAnchorable DesignTimeRectangle="1590, 1921, 14, 28" FullSelectorArgument="&lt;html app='chrome.exe' title='삼성전자 : 네이버 뉴스검색' /&gt;&lt;webctrl aaname='다음' parentid='main_pack' tag='I' /&gt;" ImageBase64="" InformativeScreenshot="b26d0f6f3af30e52964ec35f9a350ff6.png" SearchSteps="Selector" />
+                                        </uix:NExtractData.NextLink>
+                                        <uix:NExtractData.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="301, 832, 1340, 2852" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='main_pack' tag='UL' /&gt;" InformativeScreenshot="d50c28c7aadc7c61c7e19994edb2c815.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='LG생건 : 네이버 뉴스검색' /&gt;" SearchSteps="Selector" />
+                                        </uix:NExtractData.Target>
+                                      </uix:NExtractData>
+                                      <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="412,187" sap2010:WorkflowViewState.IdRef="InsertSheetX_1" Name="[SheetName]" Workbook="[News]" />
+                                      <ueab:WriteRangeX Append="True" Destination="[News.Sheet(SheetName)]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="412,164" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[Saved.Values(Of DataTable)(&quot;MyDT2&quot;)]" />
+                                    </Sequence>
+                                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="452,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://search.naver.com/search.naver?query=&amp;where=news&amp;ie=utf8&amp;sm=nws_hty" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAABtSURBVDhPY5A9wdAAxP/JxA0gA7BJEI0HmQF9T+r/I4PQa/Zg8eMf90FF/oPVIOvBa8DjH/fB4mQbAAIgMYoMAAGQS2CAaAOQNSEDog0AORubi0gyACSG7hKSDQBFJTLAawA5eHAYQEF2ZmgAALQEZw8alEMXAAAAAElFTkSuQmCC" InformativeScreenshot="5506f4874d7f8409d1a8d59a22af1b0d.png" Selector="&lt;html app='chrome.exe' title=': 네이버 뉴스검색'/&gt;" Url="https://search.naver.com/search.naver?query=&amp;where=news&amp;ie=utf8&amp;sm=nws_hty" />
+                              </uix:NApplicationCard.TargetApp>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRow.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelForEachRow>
+                    <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="560,89" sap2010:WorkflowViewState.IdRef="DeleteSheetX_1" Sheet="[News.Sheet(&quot;Sheet1&quot;)]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelApplicationCard>
+    <umab:OutlookApplicationCard Account="hyungsoo.kim@uipath.com" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="668,676" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+      <umab:OutlookApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="uipath_hyungsoo" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="454,488" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" Account="[uipath_hyungsoo]" Body="[string.Format(&quot;안녕하세요 {0}{1}의 뉴스를 전달해 드립니다. {2}{3}상세 내용은 첨부 파일을 확인하세요 {4}{5}/UiPath Robot &quot;, Environment.NewLine, Notes.Sheet(&quot;Date&quot;).Cell(&quot;Today&quot;), Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]" DisplayName="이메일 보내기" sap:VirtualizedContainerService.HintSize="412,398" sap2010:WorkflowViewState.IdRef="SendMailX_1" IsDraft="False" MaxBodyDocumentSizeMB="2" Subject="[string.Format(&quot;{0} - 오늘의 뉴스 &quot;, Notes.Sheet(&quot;Date&quot;).Cell(&quot;Today&quot;))]" To="presales.kor@uipath.com">
+              <umab:SendMailX.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">TodayNews.xlsx</InArgument>
+                </scg:List>
+              </umab:SendMailX.Files>
+            </umab:SendMailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:OutlookApplicationCard.Body>
+    </umab:OutlookApplicationCard>
+  </ueab:SequenceX>
+</Activity>
